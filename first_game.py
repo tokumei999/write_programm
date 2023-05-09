@@ -59,5 +59,26 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_q:
+                running = False
+            if event.key == pygame.K_ESCAPE:
+                running = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_b:
+                bark_text = my_font.render("Bark", True, color_red, color_blue) 
+                bark_text_rect = bark_text.get_rect() 
+                bark_text_rect.left = 300 
+                bark_text_rect.top = 175 
+                screen.blit(bark_text, bark_text_rect)
+                pygame.display.update()
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_b:
+                bark_text = my_font.render("Bark", True, color_red, color_blue) 
+                bark_text_rect = bark_text.get_rect() 
+                bark_text_rect.left = 300 
+                bark_text_rect.top = 175 
+                screen.blit(bark_text, bark_text_rect)
+                pygame.display.update()
 
 pygame.quit()

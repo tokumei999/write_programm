@@ -3,6 +3,11 @@ import pygame
 #赤、緑、青の値を表すタプルの生成
 #後でscreenを青で描写
 color_blue = (0,0,255)
+color_pink = (255,200,200)
+color_green = (0, 255, 0)
+color_white = (255, 255, 255)
+color_black = (0, 0, 0)
+color_yellow = (255, 255, 0)
 color_red = (255,0,0)
 
 #pythonモジュールを初期化
@@ -34,6 +39,14 @@ screen.blit(first_text, first_text_rect)
 #サーフェスscreenのsidekickの位置にサーフェスthumbnail_iconを表示
 #screen.bilt(thumnail_size,sidekick)
 screen.blit(thumnail_size,sidekick)
+pygame.draw.circle(screen, color_red, (330, 475), 15, 1)
+pygame.draw.circle(screen, color_yellow, (375, 475), 15, 0)
+pygame.draw.circle(screen, color_pink, (420, 475), 20, 10)
+pygame.draw.rect(screen, color_yellow, (455, 475, 20, 20), 4)
+pygame.draw.line(screen, color_red, (300, 500), (500,500), 1)
+pygame.draw.line(screen, color_yellow, (300, 515), (500, 515),1)
+pygame.draw.line(screen, color_red, (300, 530), (500, 530), 1)
+
 #画面を更新する(実際に描写する)
 pygame.display.update()
 #gameが実行中かどうかを表す変数を宣言

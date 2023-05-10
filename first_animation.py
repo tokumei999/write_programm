@@ -49,9 +49,13 @@ while running:#「プログラムが実行される限り」。だから実質�
             if event.key == pygame.K_DOWN:
                 move_y += 10
 #ここまで
+#ユーザにtが押されたらランダムにテレポートする
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_t:
+                move_x = random.randint(1, 600)
+                move_y = random.randint(1, 600)
+        
 #ゲームのウィンドウを白く塗りつぶします。
-#先に画面の処理をしてから詰めたほうがよくない？
-#後で最初のほうにもっていけばいいか。ともかく動かせるものを作るのが大切。
     game_window.fill(color_white)
 #黒色の箱を描写
     pygame.draw.rect(game_window, color_black, [move_x, move_y, 50, 50])

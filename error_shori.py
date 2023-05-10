@@ -8,7 +8,6 @@
 #    print("あなたの入力:", pin)
 #finally:
 #    print("もう終わりましたか？")
-character_name = "Tsubasa"
-character_name2 = "Carl"
-if character_name == "Tsubasa":
-    raise Exception("ははは")
+#一行目はエラーがでない。assertの条件式がTrueになるから。二行目はFalseになりAssertionErrorを吐く
+assert 1 + 1 == 2
+assert 2 + 2 == 5

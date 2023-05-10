@@ -69,7 +69,7 @@ while running:#「プログラムが実行される限り」。だから実質�
             pygame.display.set_caption("You're in conflict")
 #画面の右端が衝突していないか確認する
         if move_y < 1:
-            move_y += 50
+            move_y += 50 #ここ間違っていた。エラー吐かれずに思った動きをしてもらえないのが一番解決するのが難しそうだ。ロジックエラーってやつ。
             pygame.display.set_caption("You're in conflict")
 #ゲームのウィンドウを白く塗りつぶします。
     game_window.fill(color_white)

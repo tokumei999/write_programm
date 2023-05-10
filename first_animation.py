@@ -55,6 +55,22 @@ while running:#「プログラムが実行される限り」。だから実質�
                 move_x = random.randint(1, 600)
                 move_y = random.randint(1, 600)
         
+#画面の右端が衝突していないか確認する
+        if move_x > 750:
+            move_x -= 50
+            pygame.display.set_caption("You're in conflict")
+#画面の左端が衝突していないか確認する
+        if move_x < 1:
+            move_x += 50
+            pygame.display.set_caption("You're in conflict")
+#画面の右端が衝突していないか確認する
+        if move_y > 750:
+            move_y -= 50
+            pygame.display.set_caption("You're in conflict")
+#画面の右端が衝突していないか確認する
+        if move_y < 1:
+            move_y += 50
+            pygame.display.set_caption("You're in conflict")
 #ゲームのウィンドウを白く塗りつぶします。
     game_window.fill(color_white)
 #黒色の箱を描写
